@@ -13,6 +13,7 @@ int main()
         printf("Калькулятор модуля:\n");
         printf("1. Модуль числа\n2. Знак числа (1/-1/0)\n3. Округление вверх\n4. Округление вниз\n5. Выход\n");
         printf("Выберите действие: ");
+        
         scanf("%d", &num);
         switch(num)
         {
@@ -25,8 +26,7 @@ int main()
                 printf("Введите число: ");
                 scanf("%lf", &chislo);
                 if (chislo>0)
-                {
-                    
+                {    
                     printf("Знак числа: 1\n");
                 }
                 else if (chislo<0)
@@ -52,15 +52,15 @@ int main()
                 break;
             default:
                 printf("Ошибка, выберите действие от 1 до 5\n");
+                break;
         }
-        if (num < 5)
-        {
-            printf("Чтобы вернуться в меню, нажмите Enter");
-            while (getchar() != '\n'); // Очистка буфера ввода
-            getchar(); // Ожидание нажатия клавиши
-            printf("\n");
-        }
-
+        while (getchar() != '\n'); // Очистка буфера ввода
+            if (num < 5)
+            {
+                printf("Чтобы вернуться в меню, нажмите Enter");
+                getchar(); // Ожидание нажатия клавиши
+            }
+        printf("\n");
 
     }
 }
